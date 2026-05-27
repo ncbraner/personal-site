@@ -1,0 +1,145 @@
+{
+  "name": "Nathan Braner",
+  "title": "Principal Senior Engineer",
+  "tagline": "Data-Driven Product Strategist • Cloud Solutions Expert • Full Stack Developer",
+  "location": "Cokato, MN",
+  "email": "nate.braner@gmail.com",
+  "phone": "(952) 261-7925",
+  "linkedin": "https://linkedin.com/in/nathan-braner/",
+  "summary": "Methodical technical lead with 8+ years of experience as a software engineer and PHP, backend, and full stack developer. Specific expertise in scalability as it pertains to technical requirements and code writing for the startup B2B retail and e-commerce industries. Track record of guiding high-performing teams through priority product sprints and solutions-focused agile environments.",
+  "highlights": [
+    "Lead teams of 9+ to deliver continuous deployment with low failure rates and quick time frames",
+    "8+ years developing scalable web applications using Laravel and Vue.js",
+    "Adept in OOP/code planning and TDD testing methodologies",
+    "Transitioned several teams to agile environments, including during a complex AWS/GCP migration",
+    "Increased data pipeline speed by hours during strategic technical modernization initiative",
+    "Steering company-wide AI strategy from conversational interfaces to fully autonomous agentic systems"
+  ],
+  "certifications": [
+    { "name": "Claude 101", "issuer": "Anthropic", "description": "Core features and everyday work tasks" },
+    { "name": "Claude Code 101", "issuer": "Anthropic", "description": "Effective daily development workflow with Claude Code" },
+    { "name": "Introduction to Claude Cowork", "issuer": "Anthropic", "description": "Task loops, plugins, skills, file & research workflows" },
+    { "name": "Claude Code in Action", "issuer": "Anthropic", "description": "Integrate Claude Code into development workflow" },
+    { "name": "Introduction to Agent Skills", "issuer": "Anthropic", "description": "Build, configure, and share reusable Skills in Claude Code" },
+    { "name": "Introduction to Subagents", "issuer": "Anthropic", "description": "Sub-agents for context management and task delegation" },
+    { "name": "Building with the Claude API", "issuer": "Anthropic", "description": "Full spectrum of working with Anthropic models" },
+    { "name": "Introduction to Model Context Protocol", "issuer": "Anthropic", "description": "Build MCP servers and clients from scratch using Python" },
+    { "name": "MCP: Advanced Topics", "issuer": "Anthropic", "description": "Sampling, notifications, file system access, and transport mechanisms" },
+    { "name": "AI Fluency: Framework & Foundations", "issuer": "Anthropic", "description": "Collaborate with AI effectively, efficiently, ethically, and safely" },
+    { "name": "AI Capabilities and Limitations", "issuer": "Anthropic", "description": "Introductory course on how AI works" },
+    { "name": "Claude with Amazon Bedrock", "issuer": "Anthropic / AWS", "description": "Working with Anthropic models on AWS" },
+    { "name": "Claude with Google Cloud Vertex AI", "issuer": "Anthropic / Google", "description": "Working with Anthropic models through Vertex AI" },
+    { "name": "Certified Scrum Master (CSM)", "issuer": "Scrum Alliance", "description": "Agile project management certification" }
+  ],
+  "technologies": {
+    "Backend": ["PHP Laravel", "PHP Symfony", "Python FastAPI", "Python Flask", "Node.js"],
+    "Frontend": ["Vue.js", "React", "Angular", "JavaScript/ES6+"],
+    "Cloud & DevOps": ["AWS", "Google Cloud Platform", "Azure", "Kubernetes", "Terraform", "Docker", "CI/CD Pipelines"],
+    "Databases": ["MySQL", "PostgreSQL", "BigQuery", "DynamoDB", "NoSQL"],
+    "AI & Emerging": ["Claude Code", "MCP Servers", "Agentic Systems", "Machine Learning Integration"],
+    "Tools & Methods": ["GitHub CI", "Salesforce", "Agile/Scrum", "TDD", "OOP", "RESTful APIs"]
+  },
+  "experience": [
+    {
+      "title": "Principal Solution Engineer",
+      "company": "EMC",
+      "period": "Aug 2024 – Present",
+      "industry": "Asset Tracking — Automotive Dealer & Manufacturing",
+      "bullets": [
+        "Steering company-wide AI strategy across the spectrum from conversational interfaces to fully autonomous agentic systems",
+        "Led a team of three Senior Software Developers, driving innovation and collaboration to meet key project goals",
+        "Collaborated closely with Salesforce and Oracle teams, providing strategic consulting to align systems with business objectives",
+        "Pioneered the development of two critical internal tools, laying the foundation for their next-generation versions",
+        "Streamlined version control by consolidating three disparate systems into one cohesive solution",
+        "Updated technology stack from outdated PHP/JS to modern Laravel and React"
+      ]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Mobile Dealer Data",
+      "period": "Mar 2024 – Jul 2024",
+      "industry": "Asset Tracking — Automotive",
+      "bullets": [
+        "Spearheaded migration of a key project to Vue.js/Lambda from PHP/Symfony, enhancing system stability and performance",
+        "Established a new Lambda structure within inventory management, significantly improving tracking accuracy",
+        "Implemented front-end UI improvements including endless scrolling, just-in-time image loading, and real-time updates"
+      ]
+    },
+    {
+      "title": "Senior Software Engineer / Technical Lead",
+      "company": "Torqata Data & Analytics",
+      "period": "Feb 2022 – Oct 2023",
+      "industry": "Inventory, Pricing & Lead Generation — Automotive Retail",
+      "bullets": [
+        "Pioneered the evolution of Torqata's foundational retailer application with significant product innovations",
+        "Unveiled new shopping system that reduced cart abandonment rates and spiked sales conversions",
+        "Reworked platform to establish company's first automatic ordering capabilities based on customer transaction data",
+        "Direct oversight over 9 employees including senior front-end engineers, data scientists, and analytics leads",
+        "Mastered comprehensive technology stack: Google Cloud Suite, Kubernetes, Python FastAPI, Salesforce, Terraform"
+      ]
+    },
+    {
+      "title": "Contract Full Stack & Backend Developer",
+      "company": "Self-Employed",
+      "period": "Mar 2020 – Present",
+      "industry": "Various — BI WorldWide, Lexis Nexis, Eco Ear",
+      "bullets": [
+        "Developing robust, scalable, and efficient web applications (Laravel, Vue.js) for multiple enterprise clients",
+        "BI WorldWide: Revitalized legacy products, fortified security/stability with advanced regression testing",
+        "Lexis Nexis: Increased data pipeline speed by hours through refactoring and memory management",
+        "Guided teams through transition to agile environment during AWS/GCP migration"
+      ]
+    },
+    {
+      "title": "Developer / Scrum Master",
+      "company": "USA Clay Target League",
+      "period": "Mar 2018 – Mar 2020",
+      "industry": "Non-Profit — Youth Sports",
+      "bullets": [
+        "Oversaw creation of auxiliary mini-apps and revitalized legacy applications",
+        "Introduced agile framework for product development, directly influencing delivery speed"
+      ]
+    },
+    {
+      "title": "Web Developer / Support Engineer",
+      "company": "EcreativeWorks",
+      "period": "Jan 2016 – Mar 2018",
+      "industry": "Web Development Agency — Industrial & E-commerce",
+      "bullets": [
+        "Spearheaded design and deployment of a custom internal time-tracking tool using Laravel",
+        "Boosted operational efficiencies for 10 developers with data consistency in Salesforce"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Western Iowa Tech Community College",
+      "degree": "Associate's Degree – Diesel Technology"
+    }
+  ],
+  "vision": {
+    "intro": "When applying the core differences between strategy and planning to building an AI app, the insights shift the focus from simply \"writing code\" to creating a product that actually dominates its market.",
+    "pillars": [
+      {
+        "title": "Avoid the \"Comfort Trap\" of Building AI Features",
+        "icon": "🎯",
+        "content": "It is incredibly easy to fall into the planning trap—choosing models, building UIs, hiring developers. Because you control these costs, they feel comfortable. But a list of impressive AI features is not a strategy; it is just a plan. True strategy requires specifying a competitive outcome where customers want your product enough to make it profitable. You control the code, but you don't control users—they decide if your app succeeds."
+      },
+      {
+        "title": "Find Your App's Niche",
+        "icon": "✈️",
+        "content": "Many developers build generic AI tools, which is just participating without a theory of how to win. Instead of doing everything, you need an integrative set of choices that positions your app on a specific playing field where you can dominate. Like Southwest Airlines chose to compete with Greyhound by offering cheap, point-to-point flights—align everything to that goal. Build your entire technical architecture to solve one problem better than anyone else."
+      },
+      {
+        "title": "Embrace the \"Angst\" of Unproven AI",
+        "icon": "⚡",
+        "content": "If your app's roadmap feels entirely safe, you are likely guaranteeing a loss. Strategy has angst because you cannot prove in advance it will succeed. Accept that your theory on how the market will react cannot be perfect. Taking that leap is not bad management; it is great leadership that gives your app a chance to achieve something extraordinary."
+      },
+      {
+        "title": "Build a Testable, Single-Page AI Strategy",
+        "icon": "📋",
+        "content": "A great strategy can be written on a single page: Where are you choosing to play? How are you choosing to win? What capabilities do you need? Then ask: \"What would have to be true about ourselves, the industry, the competition, and the customers for this strategy to work?\" Launch, watch real users interact, and continuously hone your strategy as the world unfolds."
+      }
+    ]
+  }
+}
