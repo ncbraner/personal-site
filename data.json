@@ -140,6 +140,22 @@
         "Quick actions for opening the IDE, revealing folders, refreshing projects, and waking coordinators"
       ],
       "tags": ["Electron", "Desktop App", "Agentic Workflows", "Developer Tools"]
+    },
+    {
+      "name": "ScratchChat",
+      "type": "Creative Coding Companion",
+      "summary": "A lightweight learning tool that helps students and beginners work through Scratch programming ideas with clearer explanations, block guidance, and a focused chat experience.",
+      "featuredImage": {
+        "src": "images/projects/scratchchat/collage.png",
+        "alt": "ScratchChat collage showing a creative coding companion interface, settings modes, chat prompts, and Scratch block guidance."
+      },
+      "screenshots": [],
+      "highlights": [
+        "Child-friendly UX for asking Scratch programming questions",
+        "Guided explanations paired with visual Scratch block examples",
+        "Settings modes for free server-backed use or a user-provided Gemini API key"
+      ],
+      "tags": ["Learning Tool", "Scratch Support", "AI Chat", "Education"]
     }
   ],
   "education": [

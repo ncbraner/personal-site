@@ -937,18 +937,24 @@
                   <img src="${project.featuredImage.src}" alt="${project.featuredImage.alt}">
                 </div>`
               : '';
-            const screenshots = (project.screenshots || [{ src: project.image, alt: project.alt }])
+            const projectScreenshots = project.screenshots && project.screenshots.length
+              ? project.screenshots
+              : project.image
+                ? [{ src: project.image, alt: project.alt }]
+                : [];
+            const screenshots = projectScreenshots
               .map(image => `
                 <div class="project-shot">
                   <img src="${image.src}" alt="${image.alt}">
                 </div>`)
               .join('');
+            const gallery = screenshots ? `<div class="project-gallery">${screenshots}</div>` : '';
             const highlights = project.highlights.map(h => `<li>${h}</li>`).join('');
             const tags = project.tags.map(t => `<span class="tag">${t}</span>`).join('');
             grid.innerHTML += `
               <article class="project-card">
                 ${featuredImage}
-                <div class="project-gallery">${screenshots}</div>
+                ${gallery}
                 <div class="project-body">
                   <div class="project-kicker">${project.type}</div>
                   <h3>${project.name}</h3>
