@@ -151,6 +151,56 @@
       "degree": "Associate's Degree – Diesel Technology"
     }
   ],
+  "projects": [
+    {
+      "title": "AI Strategy & Agentic Systems",
+      "company": "EMC",
+      "description": "Steering company-wide AI strategy from conversational interfaces to fully autonomous agentic systems. Pioneered two critical internal tools that became foundational to the next-generation platform.",
+      "tags": ["Claude Code", "MCP", "Agentic AI", "Laravel", "React"],
+      "color": "red",
+      "outcome": "Consolidated 3 version control systems into one cohesive solution"
+    },
+    {
+      "title": "Retailer Application Evolution",
+      "company": "Torqata Data & Analytics",
+      "description": "Pioneered the evolution of Torqata's foundational retailer application. Built a new shopping system that brought purchasing in-house, reducing cart abandonment and spiking sales conversions.",
+      "tags": ["Google Cloud", "Kubernetes", "Python FastAPI", "Vue.js", "Terraform"],
+      "color": "blue",
+      "outcome": "Automatic ordering capabilities from customer transaction data"
+    },
+    {
+      "title": "Vue.js / Lambda Migration",
+      "company": "Mobile Dealer Data",
+      "description": "Spearheaded migration from PHP/Symfony to Vue.js/Lambda. Implemented endless scrolling, just-in-time image loading, and real-time updates for large inventory datasets.",
+      "tags": ["Vue.js", "AWS Lambda", "Serverless", "REST APIs"],
+      "color": "green",
+      "outcome": "Infinite inventory rendering without device slowdown"
+    },
+    {
+      "title": "Data Pipeline Modernization",
+      "company": "Lexis Nexis Risk Solutions",
+      "description": "Championed the retirement of legacy products and implemented modern integrations. Focused on organizational change management during a complex AWS/GCP migration.",
+      "tags": ["AWS", "GCP", "Agile", "Python", "Data Pipelines"],
+      "color": "yellow",
+      "outcome": "Increased pipeline speed by hours through refactoring & memory management"
+    },
+    {
+      "title": "Enterprise Time Tracking Tool",
+      "company": "EcreativeWorks",
+      "description": "Designed and deployed a custom internal time-tracking tool using Laravel after another team hit roadblocks. Integrated with Salesforce for data consistency.",
+      "tags": ["Laravel", "Salesforce", "MySQL", "PHP"],
+      "color": "blue",
+      "outcome": "Boosted operational efficiencies for 10 developers"
+    },
+    {
+      "title": "Legacy App Revitalization",
+      "company": "BI WorldWide",
+      "description": "Revitalized legacy products, streamlined Laravel applications to fortify security and stability, and executed advanced regression testing tools.",
+      "tags": ["Laravel", "TDD", "Security", "Regression Testing"],
+      "color": "green",
+      "outcome": "Fortified security posture across legacy product suite"
+    }
+  ],
   "vision": {
     "intro": "The best AI products don't announce themselves. They disappear.",
     "pillars": [

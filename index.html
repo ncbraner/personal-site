@@ -500,115 +500,99 @@
     /* ── Projects ── */
     .projects-grid {
       display: grid;
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
     .project-card {
       background: var(--surface);
       border: 1px solid var(--hairline);
       border-radius: 10px;
+      padding: 0;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.15s;
     }
 
-    .project-shot {
-      background: var(--surface-card);
-      border-bottom: 1px solid var(--hairline);
-      aspect-ratio: 16 / 10;
-      overflow: hidden;
+    .project-card:hover {
+      border-color: var(--hairline-strong);
     }
 
-    .project-shot img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: top left;
+    .project-bar {
+      height: 3px;
     }
 
-    .project-feature {
-      background: var(--surface-card);
-      border-bottom: 1px solid var(--hairline);
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-    }
-
-    .project-feature img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .project-shot + .project-shot {
-      border-left: 1px solid var(--hairline);
-    }
-
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      border-bottom: 1px solid var(--hairline);
-    }
-
-    .project-gallery .project-shot {
-      border-bottom: 0;
-    }
+    .project-bar.red { background: var(--accent-red); }
+    .project-bar.blue { background: var(--accent-blue); }
+    .project-bar.green { background: var(--accent-green); }
+    .project-bar.yellow { background: var(--accent-yellow); }
 
     .project-body {
       padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
     }
 
-    .project-kicker {
-      font-size: 12px;
-      font-weight: 400;
+    .project-company {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--mute);
       letter-spacing: 0.4px;
-      color: var(--accent-blue);
       text-transform: uppercase;
-      margin-bottom: 8px;
     }
 
     .project-card h3 {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 1.25;
+      font-size: 17px;
+      font-weight: 500;
       color: var(--ink);
-      margin-bottom: 12px;
-      font-family: Georgia, 'Times New Roman', serif;
+      letter-spacing: 0.1px;
+      line-height: 1.35;
     }
 
-    .project-summary {
-      font-size: 15px;
-      color: var(--body);
-      line-height: 1.7;
-      max-width: 820px;
-      margin-bottom: 20px;
-    }
-
-    .project-highlights {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .project-highlights li {
+    .project-desc {
       font-size: 14px;
       color: var(--body);
       line-height: 1.6;
-      padding-left: 18px;
-      position: relative;
     }
 
-    .project-highlights li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 11px;
-      width: 5px;
-      height: 5px;
-      border-radius: 1px;
-      background: var(--accent-green);
+    .project-outcome {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--accent-green);
+      line-height: 1.5;
+      padding: 10px 12px;
+      background: var(--accent-green-soft);
+      border-radius: 6px;
+    }
+
+    .project-outcome .arrow {
+      flex-shrink: 0;
+      font-weight: 600;
+      margin-top: 0px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: auto;
+      padding-top: 4px;
+    }
+
+    .project-tag {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1px;
+      color: var(--ash);
+      background: var(--surface-elevated);
+      border: 1px solid var(--hairline);
+      padding: 2px 7px;
+      border-radius: 4px;
     }
 
     .projects-empty {
@@ -623,14 +607,6 @@
       font-size: 14px;
       color: var(--mute);
       line-height: 1.6;
-    }
-
-    .projects-empty code {
-      font-size: 13px;
-      background: var(--surface-card);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--body);
     }
 
     /* ── Vision ── */
@@ -756,7 +732,8 @@
       .content { padding: 64px 24px; }
       .highlight-grid,
       .cert-grid,
-      .vision-grid { grid-template-columns: 1fr; }
+      .vision-grid,
+      .projects-grid { grid-template-columns: 1fr; }
       .skills-grid { grid-template-columns: 1fr; }
       .exp-timeline { padding-left: 0; }
       .exp-timeline::before { display: none; }
@@ -931,36 +908,19 @@
           projects.innerHTML = '<div class="projects-grid"></div>';
           const grid = projects.querySelector('.projects-grid');
           data.projects.forEach(project => {
-            const featuredImage = project.featuredImage
-              ? `
-                <div class="project-feature">
-                  <img src="${project.featuredImage.src}" alt="${project.featuredImage.alt}">
-                </div>`
+            const tags = project.tags.map(t => `<span class="project-tag">${t}</span>`).join('');
+            const outcome = project.outcome
+              ? `<div class="project-outcome"><span class="arrow">↗</span><span>${project.outcome}</span></div>`
               : '';
-            const projectScreenshots = project.screenshots && project.screenshots.length
-              ? project.screenshots
-              : project.image
-                ? [{ src: project.image, alt: project.alt }]
-                : [];
-            const screenshots = projectScreenshots
-              .map(image => `
-                <div class="project-shot">
-                  <img src="${image.src}" alt="${image.alt}">
-                </div>`)
-              .join('');
-            const gallery = screenshots ? `<div class="project-gallery">${screenshots}</div>` : '';
-            const highlights = project.highlights.map(h => `<li>${h}</li>`).join('');
-            const tags = project.tags.map(t => `<span class="tag">${t}</span>`).join('');
             grid.innerHTML += `
               <article class="project-card">
-                ${featuredImage}
-                ${gallery}
+                <div class="project-bar ${project.color || 'blue'}"></div>
                 <div class="project-body">
-                  <div class="project-kicker">${project.type}</div>
-                  <h3>${project.name}</h3>
-                  <p class="project-summary">${project.summary}</p>
-                  <ul class="project-highlights">${highlights}</ul>
-                  <div class="tags">${tags}</div>
+                  <div class="project-company">${project.company}</div>
+                  <h3>${project.title}</h3>
+                  <p class="project-desc">${project.description}</p>
+                  ${outcome}
+                  <div class="project-tags">${tags}</div>
                 </div>
               </article>`;
           });
