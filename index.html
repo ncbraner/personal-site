@@ -497,7 +497,106 @@
       margin-top: 4px;
     }
 
-    /* ── Projects ── */
+    /* ── Selected Work (Showcase) ── */
+    .showcase-card {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .showcase-card:hover {
+      border-color: var(--hairline-strong);
+    }
+
+    .showcase-feature {
+      background: var(--surface-card);
+      border-bottom: 1px solid var(--hairline);
+      overflow: hidden;
+    }
+
+    .showcase-feature img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top left;
+    }
+
+    .showcase-body {
+      padding: 24px;
+    }
+
+    .showcase-kicker {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .showcase-card h3 {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .showcase-summary {
+      font-size: 15px;
+      color: var(--body);
+      line-height: 1.7;
+      max-width: 720px;
+      margin-bottom: 16px;
+    }
+
+    .showcase-highlights {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .showcase-highlights li {
+      font-size: 14px;
+      color: var(--body);
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .showcase-highlights li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 5px;
+      height: 5px;
+      border-radius: 1px;
+      background: var(--accent-green);
+    }
+
+    .showcase-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .showcase-tag {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1px;
+      color: var(--mute);
+      background: var(--surface-elevated);
+      border: 1px solid var(--hairline);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* ── Experience Builders (Card Grid) ── */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -834,12 +933,10 @@
     </div>
 
     <div class="panel" id="panel-projects">
-      <div class="eyebrow">Portfolio &amp; Projects</div>
-      <div id="projects-list">
-        <div class="projects-empty">
-          <p>Connect with Google Stitch via MCP for live project data,<br>or add projects to <code>data.json</code> to populate this section.</p>
-        </div>
-      </div>
+      <div class="eyebrow">Selected Work</div>
+      <div id="selected-work"></div>
+      <div class="eyebrow" style="margin-top: 64px;">Experience Builders</div>
+      <div id="experience-builders"></div>
     </div>
 
     <div class="panel" id="panel-vision">
@@ -903,11 +1000,35 @@
             </div>`;
         });
 
-        const projects = document.getElementById('projects-list');
-        if (data.projects && data.projects.length) {
-          projects.innerHTML = '<div class="projects-grid"></div>';
-          const grid = projects.querySelector('.projects-grid');
-          data.projects.forEach(project => {
+        // Selected Work (showcase projects with images)
+        const selectedWork = document.getElementById('selected-work');
+        if (data.selectedWork && data.selectedWork.length) {
+          data.selectedWork.forEach(project => {
+            const img = project.featuredImage
+              ? `<div class="showcase-feature"><img src="${project.featuredImage.src}" alt="${project.featuredImage.alt}"></div>`
+              : '';
+            const highlights = project.highlights.map(h => `<li>${h}</li>`).join('');
+            const tags = project.tags.map(t => `<span class="showcase-tag">${t}</span>`).join('');
+            selectedWork.innerHTML += `
+              <article class="showcase-card">
+                ${img}
+                <div class="showcase-body">
+                  <div class="showcase-kicker">${project.type}</div>
+                  <h3>${project.name}</h3>
+                  <p class="showcase-summary">${project.summary}</p>
+                  <ul class="showcase-highlights">${highlights}</ul>
+                  <div class="showcase-tags">${tags}</div>
+                </div>
+              </article>`;
+          });
+        }
+
+        // Experience Builders (card grid)
+        const expBuilders = document.getElementById('experience-builders');
+        if (data.experienceBuilders && data.experienceBuilders.length) {
+          expBuilders.innerHTML = '<div class="projects-grid"></div>';
+          const grid = expBuilders.querySelector('.projects-grid');
+          data.experienceBuilders.forEach(project => {
             const tags = project.tags.map(t => `<span class="project-tag">${t}</span>`).join('');
             const outcome = project.outcome
               ? `<div class="project-outcome"><span class="arrow">↗</span><span>${project.outcome}</span></div>`

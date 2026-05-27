@@ -111,7 +111,7 @@
       ]
     }
   ],
-  "projects": [
+  "selectedWork": [
     {
       "name": "Nobraner Desktop",
       "type": "Desktop AI Coordination Workspace",
@@ -120,7 +120,6 @@
         "src": "images/projects/nobraner-desktop/collage.png",
         "alt": "Nobraner Desktop collage presenting a dark desktop interface for complex workflow coordination."
       },
-      "screenshots": [],
       "highlights": [
         "Project rail for switching between tracked repositories without losing context",
         "Workspace dashboard for active agents, ready tasks, recent runs, mail, and merge queue",
@@ -136,7 +135,6 @@
         "src": "images/projects/scratchchat/collage.png",
         "alt": "ScratchChat collage showing a creative coding companion interface, settings modes, chat prompts, and Scratch block guidance."
       },
-      "screenshots": [],
       "highlights": [
         "Child-friendly UX for asking Scratch programming questions",
         "Guided explanations paired with visual Scratch block examples",
@@ -145,13 +143,7 @@
       "tags": ["Learning Tool", "Scratch Support", "AI Chat", "Education"]
     }
   ],
-  "education": [
-    {
-      "institution": "Western Iowa Tech Community College",
-      "degree": "Associate's Degree – Diesel Technology"
-    }
-  ],
-  "projects": [
+  "experienceBuilders": [
     {
       "title": "AI Strategy & Agentic Systems",
       "company": "EMC",
