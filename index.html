@@ -74,6 +74,22 @@
       position: relative;
     }
 
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 0;
+    }
+
+    .hero-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 10px;
+      border: 1px solid var(--hairline);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
     .hero-eyebrow {
       font-size: 13px;
       font-weight: 400;
@@ -546,6 +562,8 @@
     @media (max-width: 768px) {
       .hero { padding: 64px 24px 0; }
       .hero h1 { font-size: 36px; }
+      .hero-top { flex-direction: column; gap: 16px; }
+      .hero-avatar { width: 72px; height: 72px; }
       .nav { padding: 0 24px; }
       .content { padding: 64px 24px; }
       .highlight-grid,
@@ -570,11 +588,16 @@
   <!-- ═══ Hero ═══ -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">Principal Senior Engineer · Cokato, MN</div>
-      <h1>Nathan Braner</h1>
-      <div class="hero-title">Data-Driven Product Strategist · Cloud Solutions Expert · Full Stack Developer</div>
-      <div class="hero-tagline">Methodical technical lead with 12+ years building scalable applications and guiding high-performing teams through agile product sprints.</div>
-      <div class="contact-row">
+      <div class="hero-top">
+        <img src="images/profile.png" alt="Nathan Braner" class="hero-avatar">
+        <div>
+          <div class="hero-eyebrow">Principal Senior Engineer · Cokato, MN</div>
+          <h1>Nathan Braner</h1>
+          <div class="hero-title">Data-Driven Product Strategist · Cloud Solutions Expert · Full Stack Developer</div>
+          <div class="hero-tagline">Methodical technical lead with 12+ years building scalable applications and guiding high-performing teams through agile product sprints.</div>
+        </div>
+      </div>
+      <div class="contact-row" style="margin-top: 32px;">
         <a href="https://linkedin.com/in/nathan-braner/" target="_blank" class="cta-pill">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
