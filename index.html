@@ -525,6 +525,21 @@
       object-position: top left;
     }
 
+    .project-feature {
+      background: var(--surface-card);
+      border-bottom: 1px solid var(--hairline);
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .project-feature img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
     .project-shot + .project-shot {
       border-left: 1px solid var(--hairline);
     }
@@ -916,6 +931,12 @@
           projects.innerHTML = '<div class="projects-grid"></div>';
           const grid = projects.querySelector('.projects-grid');
           data.projects.forEach(project => {
+            const featuredImage = project.featuredImage
+              ? `
+                <div class="project-feature">
+                  <img src="${project.featuredImage.src}" alt="${project.featuredImage.alt}">
+                </div>`
+              : '';
             const screenshots = (project.screenshots || [{ src: project.image, alt: project.alt }])
               .map(image => `
                 <div class="project-shot">
@@ -926,6 +947,7 @@
             const tags = project.tags.map(t => `<span class="tag">${t}</span>`).join('');
             grid.innerHTML += `
               <article class="project-card">
+                ${featuredImage}
                 <div class="project-gallery">${screenshots}</div>
                 <div class="project-body">
                   <div class="project-kicker">${project.type}</div>

@@ -116,6 +116,10 @@
       "name": "Nobraner Desktop",
       "type": "Desktop AI Coordination Workspace",
       "summary": "A local-first desktop command center for keeping repo workspaces, agent activity, runtime health, mail, transcripts, and project actions visible in one focused window.",
+      "featuredImage": {
+        "src": "images/projects/nobraner-desktop/collage.png",
+        "alt": "Nobraner Desktop collage presenting a dark desktop interface for complex workflow coordination."
+      },
       "screenshots": [
         {
           "src": "images/projects/nobraner-desktop/overview.png",
